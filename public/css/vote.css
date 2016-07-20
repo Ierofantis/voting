@@ -1,0 +1,81 @@
+@import "compass/css3";
+
+$nonChecked: #fff;
+$checked1: #8fd0f6;
+$checked2: #0c6497;
+body {
+  background: #57aea2;
+}
+div {
+  margin:0 0 0.75em 0; 
+}
+.container {
+  background: #f2f2f2;
+  padding: 15px;
+  margin: 50px auto;
+  width: 200px;
+  box-shadow: 0 0 2px #000, inset 0 0 5px rgba(0,0,0,0.8);;
+  border: 1px solid #222;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+.container:hover {
+  box-shadow: 0 0 2px #000, inset 0 0 25px rgba(0,0,0,0.8);
+  cursor: pointer;
+}
+input[type="radio"] {
+    display:none;
+}
+input[type="radio"] + label span {
+    display:inline-block;
+    width: 15px;
+    height: 15px;
+    margin: -2px 10px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+    border: 1px solid #c9c9c9;
+}
+input + label:hover {
+  cursor: pointer;
+}
+.light input[type="radio"] + label {
+    color: #999;
+    text-shadow: 1px 1px 0 #fff;
+    font: 16px Wellfleet, sans-serif;
+}
+.light input[type="radio"] + label span {
+    background-color: $nonChecked;
+    background-repeat:no-repeat;
+    background-position: 2px 3px;
+    background-size: 10px 10px;
+}
+
+
+.light input[type="radio"]:checked + label{        color: #555;
+}
+
+.light input[type="radio"] + label span,
+.light input[type="radio"]:checked + label span {
+  -webkit-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  transition: all 0.2s linear;
+}
+.light input[type="radio"]:checked + label span {
+ box-shadow: 0 0 2px rgba(0,0,0,0.5);
+ -webkit-animation: pop 0.2s linear 1 forwards;
+  background-image: url(http://dev.bowdenweb.com/a/i/cons/icomoon/checkmark.png);
+}
+
+@-webkit-keyframes pop /* Safari and Chrome */
+{
+  0% {
+    background-color: $checked2;
+  }
+  100% {
+    background-color: $checked1; 
+  }
+
+}

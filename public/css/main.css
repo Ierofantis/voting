@@ -1,0 +1,37 @@
+
+body{
+
+	background-color:#858989;
+}
+
+h2{
+  color:white;
+  text-align:center;
+  font-size:250%;
+  padding-top:60px;
+}
+
+#container {
+  width: 400px;
+  margin: 0 auto;
+  
+}
+
+#a,
+#b {
+  text-align: center;
+}
+
+#a {
+  width: 80%;
+  margin-left: 50px;
+  background-color: #0ff;
+  font-size:150%;
+}
+
+#b {
+  width: 80%;
+  margin-left: 50px;
+  background-color: #f0f;
+  font-size:150%;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vote For Me</title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link href="/css/vote.css" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+</head>
+ <% include partials/header.ejs %>
+<body>
+
+
+<div class="container light">
+  <h2>Vote Please</h2>
+  <p></p>
+  <form id ="form" action="/poll/<%= user.title() %>" method="post">
+    
+  <input type="hidden" name="titles" value="<%= user.title() %>" >
+  <input type="radio" id="rd1" name="option1" value="<%= user.option1 %>" > <label for="rd1"><span></span><%= user.option1 %></label>
+  <input type="radio" id="rd2" name="option2" value="<%= user.option2 %>"> <label for="rd2"><span></span><%= user.option2 %></label><br>
+
+  <input type="submit" value="Submit" class ="sub">
+</form>
+</form>
+ <div id="link"></div>
+</div>
+
+<% include partials/footer.ejs %>
+</body>
+</html>
+
+

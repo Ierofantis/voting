@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<title>Vote For Me</title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link href="/css/form.css" rel="stylesheet" type="text/css">
+
+</head>
+  <% include partials/header.ejs %>
+<body>
+
+
+
+<form action="/form" method="post">
+   <label>
+  <input name="titles" type="text" class="form-control" placeholder="Title" required autofocus>
+  </label>
+  <label>
+  <input name="option1" type="text" class="form-control" placeholder="option1" >
+  </label>
+  <label>
+  <input name="option2" type="text" class="form-control" placeholder="option2" >
+  </label>
+  
+  <input type="submit" value="Vote" class="btn btn-primary btn-block">
+</form>
+
+
+<% include partials/footer.ejs %>
+</body>
+</html>
