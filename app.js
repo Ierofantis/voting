@@ -7,7 +7,7 @@ var routes = require("./routes");
 var app = express();
 
 
-mongoose.connect("mongodb://localhost:27017/test6696");
+mongoose.connect(process.env.MONGOLAB_URI);
 
 app.set("port", process.env.PORT || 3000);
 app.set("views", path.join(__dirname, "views"));
