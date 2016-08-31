@@ -10,7 +10,7 @@ var app = express();
 mongoose.connect(process.env.MONGOLAB_URI, function (error){
    
    if (error) console.error(error);
-   else console.logo("mongo connected")
+   else console.log("mongo connected")
 
 });
 
